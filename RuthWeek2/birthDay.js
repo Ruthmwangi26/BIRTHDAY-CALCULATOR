@@ -22,80 +22,47 @@ const gender = genderElement.value;
 
     const submit = [date,gender]
 
-    var CC = date.slice(0,2)
+    var CC = date.slice(0,2);
 
-    var YY = date.slice(2,4)
+    var YY = date.slice(2,4);
 
-    var MM = date.slice(5,7)
+    var MM = date.slice(5,7);
 
-    var DD = date.slice(8,10)
+    var DD = date.slice(8,10);
 
+    const dates = [CC, YY, MM, DD]
 
+console.log(date)
 
-    var dayOfTheWeek = (((CC/4)-2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD)%7
+    var dayOfTheWeek = Math.floor((((CC/4)-2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD)%7);
     
-
     
-    
-    
-// day of the week object defination
+//    days of the week
 
-const day = {
-        1 : 'sunday',
-        2 : 'monday',
-        3 : 'tuesday',
-        4 : 'wednesday'
-        5 : 'thursday',
-        6 : 'friday',
-        7 : 'saturday',
-
-        
-}
-
-// the male Akan names object
-
-const maleAkanNames = {
-    Sunday: Kwasi,
-
-    Monday: Kwadwo,
-
-    Tuesday: Kwabena,
-
-    Wednesday: Kwaku,
-
-    Thursday:  Yaw,
-
-    Friday: Kofi,
-
-    Saturday: Kwame,
-
-}
-
-// the female Akan names object
-
-const femaleAkanNames = {
-    Sunday: Akosua,
-
-    Monday: Adwoa,
-
-    Tuesday: Abenaa,
-
-    Wednesday: Akua,
-
-    Thursday:  Yaa,
-
-    Friday: Afua,
-
-    Saturday: Ama,
-}
-
-
-
+    var daysOfWeek = [
+        "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+      ];
  
+    //   male Akan names
+      var maleAkanNames = [
+        "Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"
+      ];
+
+// female Akan names
+      var femaleAkanNames = [
+        "Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"
+      ];
+ 
+
+    //   male name get function
+
+    if (gender == "male" & dayOfTheWeek==[index]) {
+        alert('you were born on' + daysOfWeek[index] + 'your Akan name is ' + maleAkanNames[index])
+
+    }
+
+
 console.log(submit)
-
-
-
 
 
 
