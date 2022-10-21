@@ -32,18 +32,67 @@ const gender = genderElement.value;
 
 
 
-    var dayOfTheWeek = (((CC/4)-2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD) % 7
+    var dayOfTheWeek = (((CC/4)-2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD)%7
+    
 
+    
+    
+    
 // day of the week object defination
-var 0 == sunday;
-var 1 == monday;
+
+const day = {
+        1 : 'sunday',
+        2 : 'monday',
+        3 : 'tuesday',
+        4 : 'wednesday'
+        5 : 'thursday',
+        6 : 'friday',
+        7 : 'saturday',
+
+        
+}
+
+// the male Akan names object
+
+const maleAkanNames = {
+    Sunday: Kwasi,
+
+    Monday: Kwadwo,
+
+    Tuesday: Kwabena,
+
+    Wednesday: Kwaku,
+
+    Thursday:  Yaw,
+
+    Friday: Kofi,
+
+    Saturday: Kwame,
+
+}
+
+// the female Akan names object
+
+const femaleAkanNames = {
+    Sunday: Akosua,
+
+    Monday: Adwoa,
+
+    Tuesday: Abenaa,
+
+    Wednesday: Akua,
+
+    Thursday:  Yaa,
+
+    Friday: Afua,
+
+    Saturday: Ama,
+}
 
 
 
-
-
- console.log(dayOfTheWeek)
-
+ 
+console.log(submit)
 
 
 
