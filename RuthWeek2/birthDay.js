@@ -7,18 +7,13 @@ const genderElement = document.getElementById("gender")
 // retrieving input values
 
 var date = dateElement.value; 
-// var myDate = Date("date")=> converting string to date
 const gender = genderElement.value;
 
 // day of the week function
-
-
-
-// newDate = parseInt(date)
 // Day of the week (d) = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) mod 7
 // date = cc-yy-mm-dd
-
 // Retrieve the date values from the date of birth for us to run the day of the week function
+// convert date values to number
 
     const submit = [date,gender]
 
@@ -33,7 +28,7 @@ const gender = genderElement.value;
 //     const dates = [CC, YY, MM, DD]
 
 // console.log(date)
-
+// 
 
 
     var dayOfTheWeek = Math.floor((((CC/4)-2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD)%7);
@@ -61,8 +56,7 @@ const gender = genderElement.value;
    
 
     var index;
-    // fix formula bug
-  
+    
         if (dayOfTheWeek == 0){
                     index = 6;
                 }
