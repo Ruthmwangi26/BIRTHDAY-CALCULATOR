@@ -22,50 +22,81 @@ const gender = genderElement.value;
 
     const submit = [date,gender]
 
-    var CC = date.slice(0,2);
+    var CC = Number(date.slice(0,2));
 
-    var YY = date.slice(2,4);
+    var YY = Number (date.slice(2,4));
 
-    var MM = date.slice(5,7);
+    var MM = Number (date.slice(5,7));
 
-    var DD = date.slice(8,10);
+    var DD = Number (date.slice(8,10));
 
-    const dates = [CC, YY, MM, DD]
+//     const dates = [CC, YY, MM, DD]
 
-console.log(date)
+// console.log(date)
+
+
 
     var dayOfTheWeek = Math.floor((((CC/4)-2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD)%7);
     
     
 //    days of the week
 
-    var daysOfWeek = [
+    const daysOfTheWeek = [
         "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
       ];
  
     //   male Akan names
-      var maleAkanNames = [
+      const maleNames = [
         "Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"
       ];
 
 // female Akan names
-      var femaleAkanNames = [
+      const femaleNames = [
         "Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"
       ];
  
 
     //   male name get function
 
-    if (gender == "male" & dayOfTheWeek==[index]) {
-        alert('you were born on' + daysOfWeek[index] + 'your Akan name is ' + maleAkanNames[index])
+   
+
+    var index;
+    // fix formula bug
+  
+        if (dayOfTheWeek == 0){
+                    index = 6;
+                }
+               else {
+               index = dayOfTheWeek - 1;
+              }
+  
+// date of birth validation
+
+    if (date == '') {
+    alert('please enter a valid date of birth')
+    }
+else{
+
+    console.log()
+}
+    if (gender == 'null'){
+        alert('please select your gender')
 
     }
 
 
-console.log(submit)
+        if (gender == "Male") {
+              document.getElementById("results").textContent = ('You were born on' + daysOfTheWeek[index] + 'Your Akan Name is' + maleNames[index])
+                } 
+        else {
+        document.getElementById("results").textContent = ('You were born on a' + daysOfTheWeek[index] + 'You Akan Name is' + femaleNames[index])
+
+
+        console.log(submit)
+
+
+        }
 
 
 
-
-
-}
+ }
